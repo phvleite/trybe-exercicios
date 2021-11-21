@@ -1,2 +1,2 @@
-# Desenvolverdor WEB
-## Inicando os estudos na [TRYBE](betrybe.com)
+# Desenvolvedor WEB
+## Iniciando os estudos na [TRYBE](betrybe.com)
