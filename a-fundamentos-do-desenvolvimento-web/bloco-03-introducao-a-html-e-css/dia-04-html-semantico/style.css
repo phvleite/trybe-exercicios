@@ -44,7 +44,7 @@
     text-align: center;
     margin: auto;
     display: block;
-    width: 450px;
+    width: 550px;
     transition: 0.5s;
 }
 
@@ -72,3 +72,20 @@ section {
     padding-top: 25px;
     padding-bottom: 25px;
 }
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+p {
+    font-family: 'Ubuntu Mono', sans-serif;
+}
+
