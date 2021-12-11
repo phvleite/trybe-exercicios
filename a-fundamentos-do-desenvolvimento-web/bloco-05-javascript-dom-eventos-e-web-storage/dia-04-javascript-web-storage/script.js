@@ -1,3 +1,4 @@
+// INICIO SCRIPT DO MENU PARA ESCOLHER LEITURA E MOSTRA NA TELA
 let textosLeitura = [
     {   
         id: 'desiderata',
@@ -86,10 +87,10 @@ function alteraTextoNaTela() {
     }
 }
 
-// Pega os titulos dos textos para o Option do Select
+// Pega o elemento para a posição o Option do Select dos titulos dos textos
 let selectOptions = document.getElementById('leitura')
 
-// Pega o Option Select
+// Pega a opção selecionada inicial do menu
 let selecionado = document.getElementsByClassName('leitura')[0];    
 
 // Chama função para criar o menu
@@ -103,3 +104,42 @@ textoNaTela();
 
 // Verifica se houve alteração no option e chama funcao para alterar texto na tela
 selecionado.addEventListener('change', alteraTextoNaTela);
+
+// FIM  DO SCRIPT PARA O TEXTO DA LEITURA ------------------------------------------------------------
+
+// INÍCIO DO SCRIP PARA AS PREFERÊNCIAS
+
+let corFundoTela = [
+    {
+        nome: 'Gainsboro',
+        rgb: (220,220,200)
+    },
+    {
+        nome: 'Gray',
+        rgb: (128,128,128)
+    },
+    {
+        nome: 'SkyBlue',
+        rgb: (135,206,235)
+    },
+    {
+        nome: 'SteelBlue',
+        rgb: (70,130,180)
+    },
+    {
+        nome: 'MeldiumAquamarine',
+        rgb: (102,205,1700)
+    },
+    {
+        nome: 'OliveDrab',
+        rgb: (107,142,35)
+    },
+    {
+        nome: 'DarkKhaki',
+        rgb: (189,83,107)
+    },
+    {
+        nome: 'Plum',
+        rgb: (221,160,221)
+    }
+]
