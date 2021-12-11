@@ -137,7 +137,7 @@ let paletaDeCores = [
 ]
 
 // VALORES PARA O TAMANHO DA FONTE E O ESPAÇO ENTRE LINHAS
-let valoresEdicaoTexto = [ 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100];
+let valoresEdicaoTexto = [ 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 110, 120, 130, 140, 150];
 
 // MENU DE OPÇÕES DE CORES DE FUNDO DA TELA DE LEITURA 
 
@@ -159,9 +159,9 @@ function mostraPreviewCorFundoTela() {
     const valorSelecionado = selecionado.value;
     if (valorSelecionado === 'Aleatório') {
         let corAleatoria = `rgb(${(Math.random()*256).toFixed(0)},${(Math.random()*256).toFixed(0)},${(Math.random()*256).toFixed(0)})`
-        document.getElementById('preview').style.backgroundColor = corAleatoria;    
+        document.querySelector('main').style.backgroundColor = corAleatoria;    
     }
-    document.getElementById('preview').style.backgroundColor = valorSelecionado;
+    document.querySelector('main').style.backgroundColor = valorSelecionado;
 }
 
 // Pega o elemento para a posição do Option do Select da cor do fundo da tela
@@ -198,9 +198,9 @@ function mostraPreviewCorFonteTexto() {
     const valorSelecionado = selecionado.value;
     if (valorSelecionado === 'Aleatório') {
         let corAleatoria = `rgb(${(Math.random()*256).toFixed(0)},${(Math.random()*256).toFixed(0)},${(Math.random()*256).toFixed(0)})`
-        document.getElementById('preview').style.color = corAleatoria;    
+        document.querySelector('main').style.color = corAleatoria;    
     }
-    document.getElementById('preview').style.color = valorSelecionado;
+    document.querySelector('main').style.color = valorSelecionado;
 }
 
 // Pega o elemento para a posição do Option do Select da cor do fundo da tela
@@ -234,8 +234,7 @@ function criaMenuTamanhoFonteTexto() {
 function mostraPreviewTamanhoFonteTexto() {
     selecionado = document.getElementsByClassName('tamanhoFonte')[0];
     const valorSelecionado = selecionado.value;
-    //console.log(valorSelecionado);
-    document.getElementById('textPreview').style.fontSize = valorSelecionado;
+    document.querySelector('main').style.fontSize = valorSelecionado;
 }
 
 // Pega o elemento para a posição do Option do Select do tamanho da fonte do texto
@@ -251,3 +250,37 @@ document.getElementById('textPreview').style.fontSize = opcaoTamanhoFonteTexto.v
 // Verifica se houve alteração no option da cor do fundo de tela chama funcao para mostrar no preview
 opcaoTamanhoFonteTexto.addEventListener('change', mostraPreviewTamanhoFonteTexto);
 console.log(document.getElementById('textPreview').innerHTML) 
+
+//---------------------------------------------------------//
+
+// MENU DE OPÇÕES DO TAMANHO DO ESPAÇO DO TEXTO
+
+function criaMenuEspacoLinhasTexto() {
+    for (i = 0; i < valoresEdicaoTexto.length; i += 1) {
+        const option = document.createElement('option');
+        option.innerText = `${valoresEdicaoTexto[i]}%`;
+        option.setAttribute("id", `${valoresEdicaoTexto[i]}%`);
+        if (valoresEdicaoTexto[i] === 20) {
+            option.setAttribute("selected", "selected");
+        }
+        selectOptionsEspacoLinhasTexto.appendChild(option);
+    }
+}
+
+function mostraPreviewEspacoLinhasTexto() {
+    selecionado = document.getElementsByClassName('espacoLinhasTexto')[0];
+    const valorSelecionado = selecionado.value;
+    document.querySelector('main').style.lineHeight = valorSelecionado;
+}
+
+// Pega o elemento para a posição do Option do Select do tamanho da fonte do texto
+let selectOptionsEspacoLinhasTexto = document.getElementById('espacoLinhasTexto')
+
+criaMenuEspacoLinhasTexto()
+
+// Pega a opção selecionada inicial do menu cor fundo tela
+let opcaoEspacoLinhasTexto = document.getElementsByClassName('espacoLinhasTexto')[0];
+document.getElementById('textPreview').style.lineHeight = opcaoEspacoLinhasTexto.value;
+
+// Verifica se houve alteração no option da cor do fundo de tela chama funcao para mostrar no preview
+opcaoEspacoLinhasTexto.addEventListener('change', mostraPreviewEspacoLinhasTexto);
