@@ -87,14 +87,14 @@ function alteraTextoNaTela() {
     }
 }
 
-// Pega o elemento para a posição o Option do Select dos titulos dos textos
+// Pega o elemento para a posição do Option do Select dos titulos dos textos
 let selectOptions = document.getElementById('leitura')
-
-// Pega a opção selecionada inicial do menu
-let selecionado = document.getElementsByClassName('leitura')[0];    
 
 // Chama função para criar o menu
 criaMenu();
+
+// Pega a opção selecionada inicial do menu
+let selecionado = document.getElementsByClassName('leitura')[0];    
 
 // Pega o elemento PAI para onde inserir o texto
 let localTexto = document.getElementById('texto');
@@ -108,6 +108,8 @@ selecionado.addEventListener('change', alteraTextoNaTela);
 // FIM  DO SCRIPT PARA O TEXTO DA LEITURA ------------------------------------------------------------
 
 // INÍCIO DO SCRIP PARA AS PREFERÊNCIAS
+
+// MENU DE OPÇÕES DE CORES DE FUNDO DA TELA DE LEITURA
 
 let corFundoTela = [
     {
@@ -127,7 +129,7 @@ let corFundoTela = [
         rgb: (70,130,180)
     },
     {
-        nome: 'MeldiumAquamarine',
+        nome: 'MediumAquamarine',
         rgb: (102,205,1700)
     },
     {
@@ -141,5 +143,58 @@ let corFundoTela = [
     {
         nome: 'Plum',
         rgb: (221,160,221)
+    },
+    {
+        nome: 'White',
+        rgb: (255,255,255)
+    },
+    {
+        nome: 'GhostWhite',
+        rgb: (248,248,255)
+    },
+    {
+        nome: 'AliceBlue',
+        rgb: (240,248,255)
+    },
+    {
+        nome: 'AntiqueWhite',
+        rgb: (250,235,215)
     }
 ]
+
+function criaMenuCorFundoTelaTexto(){
+    corFundoTela.sort(function(a,b){
+        return a.nome < b.nome ? -1 : a.nome > b.nome ? 1 : 0;
+    })
+    for (i = 0; i < corFundoTela.length; i += 1) {
+        const option = document.createElement('option');
+        option.innerText = corFundoTela[i].nome;
+        option.setAttribute("id", corFundoTela[i].nome);
+        if (corFundoTela[i].nome === 'White'){
+            option.setAttribute("selected", "selected");
+        }
+        selectOptionsCorFundoTelaLeitura.appendChild(option);
+    }
+}
+
+function mostraPreviewCorFundoTela() {
+    selecionado = document.getElementsByClassName('corFundoTela')[0];    
+    const valorSelecionado = selecionado.value;
+    for (i = 0; i < corFundoTela.length; i += 1) {
+        if (corFundoTela[i].nome === valorSelecionado){
+            document.getElementById('preview').style.backgroundColor = valorSelecionado;            
+        }
+    }
+}
+
+// Pega o elemento para a posição do Option do Select da cor do fundo da tela
+let selectOptionsCorFundoTelaLeitura = document.getElementById('corFundoTela')
+
+criaMenuCorFundoTelaTexto()
+
+// Pega a opção selecionada inicial do menu cor fundo tela
+let opcaoCorFundoTela = document.getElementsByClassName('corFundoTela')[0]; 
+document.getElementById('preview').style.backgroundColor = opcaoCorFundoTela.value;
+
+// Verifica se houve alteração no option da cor do fundo de tela chama funcao para mostrar no preview
+opcaoCorFundoTela.addEventListener('change', mostraPreviewCorFundoTela);
