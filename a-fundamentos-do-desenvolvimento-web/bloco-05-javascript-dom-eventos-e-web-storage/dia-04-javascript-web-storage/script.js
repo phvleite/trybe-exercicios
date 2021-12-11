@@ -1,6 +1,6 @@
 // INICIO SCRIPT DO MENU PARA ESCOLHER LEITURA E MOSTRA NA TELA
 let textosLeitura = [
-    {   
+    {
         id: 'desiderata',
         titulo: 'Desiderata',
         texto: 'Siga tranquilamente entre a pressa e a inquietude, lembrando-se que há sempre paz no silêncio.Tanto quanto possível, sem se humilhar, mantenha boas relações com todas as pessoas. Fale a sua verdade mansa e claramente e ouça a dos outros, mesmo a dos insensatos e ignorantes, pois eles também têm sua própria história. Evite as pessoas escandalosas e agressivas. Elas afligem o nosso espírito. Se você se comparar com os outros, tornar-se-á presunçoso e magoado, pois haverá sempre alguém superior e alguém inferior a você. Você é filho do Universo, irmão das estrelas e árvores. Você merece estar aqui, e mesmo sem você perceber, a Terra e o Universo vão cumprir o seu destino. Desfrute das suas realizações, bem como dos seus planos. Mantenha-se interessado em sua carreira, ainda que humilde, pois ela é um ganho real na fortuna cambiante do tempo. Tenha cautela nos negócios, pois o mundo está cheio de astúcias, mas não se torne um cético porque a virtude sempre existirá. Muita gente luta por altos ideais e em toda a parte a vida está cheia de heroísmo. Seja você mesmo, principalmente. Não simule afeição. Não seja descrente do amor, porque mesmo diante de tanta aridez e tanto desencanto ele é tão perene quanto a selva. Aceite com carinho o conselho dos mais velhos e seja compreensivo com os arroubos inovadores da juventude. Alimente a força do espírito que o protegerá no infortúnio inesperado, mas não se desespere com perigos imaginários. Muitos temores nascem do cansaço e da solidão, e a despeito de uma disciplina rigorosa. Seja gentil para consigo mesmo. Portanto, esteja em paz com Deus como quer que você o conceba e quaisquer que sejam seus trabalhos e as aspirações. Na fatigante confusão da vida, mantenha-se em paz com sua própria alma, apesar de todas as falsidades, fadigas e desencantos. O mundo ainda é bonito. Seja prudente e faça tudo para ser feliz!'
@@ -47,25 +47,25 @@ let textosLeitura = [
     }
 ]
 
-function criaMenu(){
-    textosLeitura.sort(function(a,b){
+function criaMenu() {
+    textosLeitura.sort(function (a, b) {
         return a.titulo < b.titulo ? -1 : a.titulo > b.titulo ? 1 : 0;
     })
     for (i = 0; i < textosLeitura.length; i += 1) {
         const option = document.createElement('option');
         option.innerText = textosLeitura[i].titulo;
         option.setAttribute("id", textosLeitura[i].id);
-        if (textosLeitura[i].titulo === 'Desiderata'){
+        if (textosLeitura[i].titulo === 'Desiderata') {
             option.setAttribute("selected", "selected");
         }
         selectOptions.appendChild(option);
     }
 }
 
-function textoNaTela(){
+function textoNaTela() {
     const valorSelecionado = selecionado.value;
     for (i = 0; i < textosLeitura.length; i += 1) {
-        if (textosLeitura[i].titulo === valorSelecionado){
+        if (textosLeitura[i].titulo === valorSelecionado) {
             const texto = document.createElement('p');
             texto.setAttribute("id", "textoLeitura");
             texto.innerText = textosLeitura[i].texto;
@@ -76,10 +76,10 @@ function textoNaTela(){
 }
 
 function alteraTextoNaTela() {
-    selecionado = document.getElementsByClassName('leitura')[0];    
+    selecionado = document.getElementsByClassName('leitura')[0];
     const valorSelecionado = selecionado.value;
     for (i = 0; i < textosLeitura.length; i += 1) {
-        if (textosLeitura[i].titulo === valorSelecionado){
+        if (textosLeitura[i].titulo === valorSelecionado) {
             const texto = document.getElementById('textoLeitura');
             texto.innerText = textosLeitura[i].texto;
             document.getElementById('tituloTexto').innerText = textosLeitura[i].titulo;
@@ -94,7 +94,7 @@ let selectOptions = document.getElementById('leitura')
 criaMenu();
 
 // Pega a opção selecionada inicial do menu
-let selecionado = document.getElementsByClassName('leitura')[0];    
+let selecionado = document.getElementsByClassName('leitura')[0];
 
 // Pega o elemento PAI para onde inserir o texto
 let localTexto = document.getElementById('texto');
@@ -107,70 +107,47 @@ selecionado.addEventListener('change', alteraTextoNaTela);
 
 // FIM  DO SCRIPT PARA O TEXTO DA LEITURA ------------------------------------------------------------
 
-// INÍCIO DO SCRIP PARA AS PREFERÊNCIAS
+// INÍCIO DO SCRIPT PARA AS PREFERÊNCIAS
 
-// MENU DE OPÇÕES DE CORES DE FUNDO DA TELA DE LEITURA
-
-let corFundoTela = [
-    {
-        nome: 'Gainsboro',
-        rgb: (220,220,200)
-    },
-    {
-        nome: 'Gray',
-        rgb: (128,128,128)
-    },
-    {
-        nome: 'SkyBlue',
-        rgb: (135,206,235)
-    },
-    {
-        nome: 'SteelBlue',
-        rgb: (70,130,180)
-    },
-    {
-        nome: 'MediumAquamarine',
-        rgb: (102,205,1700)
-    },
-    {
-        nome: 'OliveDrab',
-        rgb: (107,142,35)
-    },
-    {
-        nome: 'DarkKhaki',
-        rgb: (189,83,107)
-    },
-    {
-        nome: 'Plum',
-        rgb: (221,160,221)
-    },
-    {
-        nome: 'White',
-        rgb: (255,255,255)
-    },
-    {
-        nome: 'GhostWhite',
-        rgb: (248,248,255)
-    },
-    {
-        nome: 'AliceBlue',
-        rgb: (240,248,255)
-    },
-    {
-        nome: 'AntiqueWhite',
-        rgb: (250,235,215)
-    }
+// PALETA DE CORES PARA O FUNDO DA TELA E FONTE
+let paletaDeCores = [
+    'Gainsboro',
+    'Gray',
+    'SkyBlue',
+    'SteelBlue',
+    'MediumAquamarine',
+    'OliveDrab',
+    'DarkKhaki',
+    'Plum',
+    'White',
+    'GhostWhite',
+    'AliceBlue',
+    'AntiqueWhite',
+    'WhiteSmoke',
+    'Thistle',
+    'OrangeRed',
+    'FireBrick',
+    'DarkRed',
+    'Black',
+    'Chocolate',
+    'Silver',
+    'Navy',
+    'DimGray',
+    'Aleatório'
 ]
 
-function criaMenuCorFundoTelaTexto(){
-    corFundoTela.sort(function(a,b){
-        return a.nome < b.nome ? -1 : a.nome > b.nome ? 1 : 0;
-    })
-    for (i = 0; i < corFundoTela.length; i += 1) {
+// VALORES PARA O TAMANHO DA FONTE E O ESPAÇO ENTRE LINHAS
+let valoresEdicaoTexto = [ 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100];
+
+// MENU DE OPÇÕES DE CORES DE FUNDO DA TELA DE LEITURA 
+
+function criaMenuCorFundoTelaTexto() {
+    paletaDeCores = paletaDeCores.sort()
+    for (i = 0; i < paletaDeCores.length; i += 1) {
         const option = document.createElement('option');
-        option.innerText = corFundoTela[i].nome;
-        option.setAttribute("id", corFundoTela[i].nome);
-        if (corFundoTela[i].nome === 'White'){
+        option.innerText = paletaDeCores[i];
+        option.setAttribute("id", paletaDeCores[i]);
+        if (paletaDeCores[i] === 'White') {
             option.setAttribute("selected", "selected");
         }
         selectOptionsCorFundoTelaLeitura.appendChild(option);
@@ -178,13 +155,13 @@ function criaMenuCorFundoTelaTexto(){
 }
 
 function mostraPreviewCorFundoTela() {
-    selecionado = document.getElementsByClassName('corFundoTela')[0];    
+    selecionado = document.getElementsByClassName('corFundoTela')[0];
     const valorSelecionado = selecionado.value;
-    for (i = 0; i < corFundoTela.length; i += 1) {
-        if (corFundoTela[i].nome === valorSelecionado){
-            document.getElementById('preview').style.backgroundColor = valorSelecionado;            
-        }
+    if (valorSelecionado === 'Aleatório') {
+        let corAleatoria = `rgb(${(Math.random()*256).toFixed(0)},${(Math.random()*256).toFixed(0)},${(Math.random()*256).toFixed(0)})`
+        document.getElementById('preview').style.backgroundColor = corAleatoria;    
     }
+    document.getElementById('preview').style.backgroundColor = valorSelecionado;
 }
 
 // Pega o elemento para a posição do Option do Select da cor do fundo da tela
@@ -193,98 +170,84 @@ let selectOptionsCorFundoTelaLeitura = document.getElementById('corFundoTela')
 criaMenuCorFundoTelaTexto()
 
 // Pega a opção selecionada inicial do menu cor fundo tela
-let opcaoCorFundoTela = document.getElementsByClassName('corFundoTela')[0]; 
+let opcaoCorFundoTela = document.getElementsByClassName('corFundoTela')[0];
 document.getElementById('preview').style.backgroundColor = opcaoCorFundoTela.value;
 
 // Verifica se houve alteração no option da cor do fundo de tela chama funcao para mostrar no preview
 opcaoCorFundoTela.addEventListener('change', mostraPreviewCorFundoTela);
 
-// MENU DE OPÇÕES DE CORES DA FONTE DE LEITURA
+// --------------------------------------------------------//
 
-let corFundoTela = [
-    {
-        nome: 'Gainsboro',
-        rgb: (220,220,200)
-    },
-    {
-        nome: 'Gray',
-        rgb: (128,128,128)
-    },
-    {
-        nome: 'SkyBlue',
-        rgb: (135,206,235)
-    },
-    {
-        nome: 'SteelBlue',
-        rgb: (70,130,180)
-    },
-    {
-        nome: 'MediumAquamarine',
-        rgb: (102,205,1700)
-    },
-    {
-        nome: 'OliveDrab',
-        rgb: (107,142,35)
-    },
-    {
-        nome: 'DarkKhaki',
-        rgb: (189,83,107)
-    },
-    {
-        nome: 'Plum',
-        rgb: (221,160,221)
-    },
-    {
-        nome: 'White',
-        rgb: (255,255,255)
-    },
-    {
-        nome: 'GhostWhite',
-        rgb: (248,248,255)
-    },
-    {
-        nome: 'AliceBlue',
-        rgb: (240,248,255)
-    },
-    {
-        nome: 'AntiqueWhite',
-        rgb: (250,235,215)
-    }
-]
+// MENU DE OPÇÕES DE CORES DA FONTE DO TEXTO
 
-function criaMenuCorFundoTelaTexto(){
-    corFundoTela.sort(function(a,b){
-        return a.nome < b.nome ? -1 : a.nome > b.nome ? 1 : 0;
-    })
-    for (i = 0; i < corFundoTela.length; i += 1) {
+function criaMenuCorFonteTexto() {
+    paletaDeCores = paletaDeCores.sort()
+    for (i = 0; i < paletaDeCores.length; i += 1) {
         const option = document.createElement('option');
-        option.innerText = corFundoTela[i].nome;
-        option.setAttribute("id", corFundoTela[i].nome);
-        if (corFundoTela[i].nome === 'White'){
+        option.innerText = paletaDeCores[i];
+        option.setAttribute("id", paletaDeCores[i]);
+        if (paletaDeCores[i] === 'Black') {
             option.setAttribute("selected", "selected");
         }
-        selectOptionsCorFundoTelaLeitura.appendChild(option);
+        selectOptionsCorFonteLeitura.appendChild(option);
     }
 }
 
-function mostraPreviewCorFundoTela() {
-    selecionado = document.getElementsByClassName('corFundoTela')[0];    
+function mostraPreviewCorFonteTexto() {
+    selecionado = document.getElementsByClassName('corTextoLeitura')[0];
     const valorSelecionado = selecionado.value;
-    for (i = 0; i < corFundoTela.length; i += 1) {
-        if (corFundoTela[i].nome === valorSelecionado){
-            document.getElementById('preview').style.backgroundColor = valorSelecionado;            
-        }
+    if (valorSelecionado === 'Aleatório') {
+        let corAleatoria = `rgb(${(Math.random()*256).toFixed(0)},${(Math.random()*256).toFixed(0)},${(Math.random()*256).toFixed(0)})`
+        document.getElementById('preview').style.color = corAleatoria;    
     }
+    document.getElementById('preview').style.color = valorSelecionado;
 }
 
 // Pega o elemento para a posição do Option do Select da cor do fundo da tela
-let selectOptionsCorFundoTelaLeitura = document.getElementById('corFundoTela')
+let selectOptionsCorFonteLeitura = document.getElementById('corTextoLeitura')
 
-criaMenuCorFundoTelaTexto()
+criaMenuCorFonteTexto()
 
 // Pega a opção selecionada inicial do menu cor fundo tela
-let opcaoCorFundoTela = document.getElementsByClassName('corFundoTela')[0]; 
-document.getElementById('preview').style.backgroundColor = opcaoCorFundoTela.value;
+let opcaoCorFonteTexto = document.getElementsByClassName('corTextoLeitura')[0];
+document.getElementById('preview').style.font = opcaoCorFonteTexto.value;
 
 // Verifica se houve alteração no option da cor do fundo de tela chama funcao para mostrar no preview
-opcaoCorFundoTela.addEventListener('change', mostraPreviewCorFundoTela);
+opcaoCorFonteTexto.addEventListener('change', mostraPreviewCorFonteTexto);
+
+// --------------------------------------------------------//
+
+// MENU DE OPÇÕES DO TAMANHO DA FONTE DO TEXTO
+
+function criaMenuTamanhoFonteTexto() {
+    for (i = 0; i < valoresEdicaoTexto.length; i += 1) {
+        const option = document.createElement('option');
+        option.innerText = `${valoresEdicaoTexto[i]}px`;
+        option.setAttribute("id", `${valoresEdicaoTexto[i]}px`);
+        if (valoresEdicaoTexto[i] === 15) {
+            option.setAttribute("selected", "selected");
+        }
+        selectOptionsTamanhoFonteLeitura.appendChild(option);
+    }
+}
+
+function mostraPreviewTamanhoFonteTexto() {
+    selecionado = document.getElementsByClassName('tamanhoFonte')[0];
+    const valorSelecionado = selecionado.value;
+    //console.log(valorSelecionado);
+    document.getElementById('textPreview').style.fontSize = valorSelecionado;
+}
+
+// Pega o elemento para a posição do Option do Select do tamanho da fonte do texto
+let selectOptionsTamanhoFonteLeitura = document.getElementById('tamanhoFonte')
+
+criaMenuTamanhoFonteTexto()
+
+// Pega a opção selecionada inicial do menu cor fundo tela
+let opcaoTamanhoFonteTexto = document.getElementsByClassName('tamanhoFonte')[0];
+document.getElementById('textPreview').style.fontSize = opcaoTamanhoFonteTexto.value;
+//console.log(document.getElementById('textPreview').innerText);
+
+// Verifica se houve alteração no option da cor do fundo de tela chama funcao para mostrar no preview
+opcaoTamanhoFonteTexto.addEventListener('change', mostraPreviewTamanhoFonteTexto);
+console.log(document.getElementById('textPreview').innerHTML) 
