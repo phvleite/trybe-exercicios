@@ -1,0 +1,85 @@
+body {
+    align-items: center;
+    background-color: #363636;
+    color: white;
+    display: flex;
+    flex-flow: column wrap;
+    font-family: Montserrat, sans-serif;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+header {
+    font-size: 15px;
+    font-weight: 900;
+}
+
+footer {
+    margin: 0;
+    background-color: #696969;
+    margin: 30px;
+    padding: 30px;
+    line-height: 130%;
+    width: 950;
+}
+
+main {
+    margin: 15px;
+}
+
+.texto {
+    align-items: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 2px;
+    padding: 15px;
+    text-align: center;
+    width: 950px;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    line-height: 100%;
+}
+
+.leitura {
+    align-items: center;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 20px;
+    padding: 10px;
+    text-align: left;
+
+}
+
+#tituloPreferencias {
+    font-size: 30px;
+    padding-bottom: 20px;
+    font-weight: 900;
+}
+
+.corFundoTela, .corTextoLeitura, .tamanhoFonte, .espacoLinhasTexto, .fonteTextoLeitura {
+    align-items: center;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 5px;
+    padding: 8px;
+    text-align: left;
+}
+
+#btSalvaPreferencias, #btRestauraPadrao {
+    align-items: center;
+    flex-flow: column wrap;
+    justify-content: center;
+    font-family: Montserrat, sans-serif;
+    margin-left: 100px;
+    margin-right: auto;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 700;
+    width: 300px;
+}
