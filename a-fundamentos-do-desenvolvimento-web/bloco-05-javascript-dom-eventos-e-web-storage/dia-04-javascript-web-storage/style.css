@@ -67,7 +67,6 @@ main
 #menu-dropdow
 {
     width: 100%;
-    border: solid 3px salmon;
     margin-bottom: 10px;
 }
 #tituloPreferencias
@@ -82,7 +81,6 @@ main
     padding: 5px;
     text-align: left;
     margin-bottom: 10px;
-    border: solid 1px black;
 }
 .dropdow-text
 {
@@ -93,8 +91,13 @@ main
 .espacoLinhasTexto, .fonteTextoLeitura
 {
     font-size: 0.9em;
+    color: navy;
     width: 300px;
-    padding: 5px;
+    border: none;
+    outline: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    padding: 12px 20px;
+    border-radius: 10px;
 }
 .button
 {
