@@ -1,85 +1,112 @@
-body {
-    align-items: center;
-    background-color: #363636;
-    color: white;
-    display: flex;
-    flex-flow: column wrap;
-    font-size: 16px;
-    font-family: Montserrat, sans-serif;
-    justify-content: center;
+*
+{
     margin: 0;
     padding: 0;
-    width: 100vw;
+    font-size: 16px;
 }
-header {
-    font-size: 1em;
-    font-weight: 900;
-}
-footer {
-    margin: 0;
-    background-color: #696969;
-    margin: 30px;
-    padding: 30px;
-    line-height: 130%;
-    width: 950;
-}
-main {
-    margin: 15px;
-}
-.texto {
-    align-items: center;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    margin: 2px;
-    padding: 15px;
-    text-align: center, justify;
-    width: 950px;
-    background-color: white;
-    color: black;
-    font-size: 15px;
-    line-height: 100%;
-    border-radius: 2%;
-    height: 950px;
-}
-.leitura {
-    align-items: center;
-    flex-flow: column wrap;
-    justify-content: center;
-    margin: 20px;
-    padding: 10px;
-    text-align: left;
-
-}
-#tituloPreferencias {
-    font-size: 30px;
-    padding-bottom: 20px;
-    font-weight: 900;
-}
-.corFundoTela, .corTextoLeitura, .tamanhoFonte, .espacoLinhasTexto, .fonteTextoLeitura {
-    align-items: center;
-    flex-flow: column wrap;
-    justify-content: center;
-    margin: 5px;
-    padding: 8px;
-    text-align: left;
-}
-#btSalvaPreferencias, #btRestauraPadrao {
-    align-items: center;
-    flex-flow: column wrap;
-    justify-content: center;
+body
+{
+    background-color: #dcdcdc;
+    color: #191970;
     font-family: Montserrat, sans-serif;
-    margin-left: 100px;
-    margin-right: auto;
-    margin-top: 10px;
-    padding: 10px;
+}
+header
+{
+    text-align: center;
+    width: 1080px;
+    margin: 0 auto;
+    padding: 20px;
+}
+header h1
+{
+    font-size: 2.5em;
+    font-weight: 900;
+    letter-spacing: -3px;
+}
+footer
+{
+    padding: 30px;
+    width: 1080px;
+    text-align: center;
+    margin: 0 auto;
+}
+main
+{
+    width: 1080px;
+    margin: 0 auto;
+}
+#texto-leitura
+{
+    width: 700px;
+    float: left;
+    height: 800px;
+}
+.texto
+{
     text-align: left;
-    font-size: 20px;
-    font-weight: 700;
-    width: 300px;
+    padding: 0 20px;
+    height: 100%;
+    border-radius: 25px;
+    box-shadow: #a9a9a9 0px 20px 30px 1px;
 }
 #tituloTexto {
     font-size: 1.5em;
     font-weight: 600;
-    margin-bottom: 30px;
+    text-align: center;
+    padding: 20px;
+    letter-spacing: 5px;
+}
+#preferencias
+{
+    width: 350px;
+    float: right;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+}
+#menu-dropdow
+{
+    width: 100%;
+    border: solid 3px salmon;
+    margin-bottom: 10px;
+}
+#tituloPreferencias
+{
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+}
+.dropdow
+{
+    width: 100%;
+    padding: 5px;
+    text-align: left;
+    margin-bottom: 10px;
+    border: solid 1px black;
+}
+.dropdow-text
+{
+    font-size: 0.8em;
+    font-weight: 500;
+}
+.leitura, .corFundoTela, .corTextoLeitura, .tamanhoFonte,
+.espacoLinhasTexto, .fonteTextoLeitura
+{
+    font-size: 0.9em;
+    width: 300px;
+    padding: 5px;
+}
+.button
+{
+    margin: 0 auto;
+}
+#btSalvaPreferencias, #btRestauraPadrao
+{
+    margin: 5px auto;
+    padding: 10px;
+    width: 200px;
+}
+p
+{
+    line-height: normal;
 }

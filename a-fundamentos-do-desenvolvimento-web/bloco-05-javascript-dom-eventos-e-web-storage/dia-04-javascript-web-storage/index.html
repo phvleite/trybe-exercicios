@@ -18,53 +18,61 @@
         <h1>Leitura Agradável</h1>
     </header>
     <main>
-        <div>
-            <labef for='leitura'>Escolha seu texto para leitura</labef>
-            <select class="leitura" id="leitura">
-            </select>
-        </div>
-        <div class="texto">
-            <section id="tituloTexto">
-                <span id="titulo"></span>
-            </section>
-            <section id="texto">
-            </section>
-        </div>
-    </main>
-    <footer>
-        <div id="preferencias">
+        <section id="texto-leitura">
+            <div class="texto">
+                <section id="tituloTexto">
+                    <span id="titulo"></span>
+                </section>
+                <section id="texto">
+                </section>
+            </div>
+        </section>
+        <section id="preferencias">
             <span id="tituloPreferencias">Preferências</span>
-            <div>
-                <div>
-                    <labef for='corFundoTela'>Escolha a cor de fundo da tela</labef>
+            <div id="menu-dropdow">
+                <div class="dropdow" id="dropdown-leitura">
+                    <labef class="dropdow-text" for='leitura'>Texto para leitura</labef>
+                    <select class="leitura" id="leitura">
+                    </select>
+                </div>
+                <div class="dropdow" id="dropdown-cor-fundo-tela">
+                    <labef class="dropdow-text" for='corFundoTela'>Cor de fundo da tela</labef>
                     <select class="corFundoTela" id="corFundoTela">
                     </select>
                 </div>
-                <div>
-                    <labef for='corTextoLeitura'>Escolha a cor da fonte do texto de leitura</labef>
+                <div class="dropdow" id="dropdown-cor-fonte-leitura">
+                    <labef class="dropdow-text" for='corTextoLeitura'>Cor da fonte do texto de leitura</labef>
                     <select class="corTextoLeitura" id="corTextoLeitura">
                     </select>
                 </div>
-                <div>
-                    <labef for='tamanhoFonte'>Escolha o tamanho da fonte do texto</labef>
+                <div class="dropdow" id="dropdown-tamanho-da-fonte">
+                    <labef class="dropdow-text" for='tamanhoFonte'>Tamanho da fonte do texto</labef>
                     <select class="tamanhoFonte" id="tamanhoFonte">
                     </select>
                 </div>
-                <div>
-                    <labef for='espacoLinhasTexto'>Escolha o espaçamento entre as linhas do texto</labef>
+                <div class="dropdow" id="dropdown-espaco-linhas-texto">
+                    <labef class="dropdow-text" for='espacoLinhasTexto'>Espaçamento entre as linhas do texto</labef>
                     <select class="espacoLinhasTexto" id="espacoLinhasTexto">
                     </select>
                 </div>
-                <div>
-                    <labef for='fonteTextoLeitura'>Escolha a fonte do texto de leitura</labef>
+                <div class="dropdow" id="dropdown-fonte-texto-leitura">
+                    <labef class="dropdow-text" for='fonteTextoLeitura'>Fonte do texto de leitura</labef>
                     <select class="fonteTextoLeitura" id="fonteTextoLeitura">
                     </select>
                 </div>
-                    <button id="btSalvaPreferencias">Salvar Preferências</button>
-                <div>
-                    <button id="btRestauraPadrao">Restaurar Padrão</button>
-                </div>
             </div>
+            <div class="button" id="bt-salvar-prferencias">
+                <button id="btSalvaPreferencias">Salvar Preferências</button>
+            </div>
+            <div class="button" id="bt-restaurar-padrao">
+                <button id="btRestauraPadrao">Restaurar Padrão</button>
+            </div>
+        </section>
+        <div style="clear: both;"></div>
+    </main>
+    <footer>
+        <div>
+            &copy;Todos os direitos reservados 2000 - 2022
         </div>
     </footer>
     <script src="script.js"></script>
