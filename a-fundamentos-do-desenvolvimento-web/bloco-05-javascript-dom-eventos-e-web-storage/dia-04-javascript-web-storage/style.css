@@ -39,7 +39,7 @@ main
 {
     width: 700px;
     float: left;
-    height: 800px;
+    height: 700px;
 }
 .texto
 {
@@ -60,7 +60,7 @@ main
 {
     width: 350px;
     float: right;
-    height: 800px;
+    height: 600px;
     display: flex;
     flex-direction: column;
 }
@@ -108,6 +108,17 @@ main
     margin: 5px auto;
     padding: 10px;
     width: 200px;
+    border: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    color: navy;
+    border-radius: 10px;
+    background-color: gainsboro;
+}
+#btSalvaPreferencias:hover, #btRestauraPadrao:hover
+{
+    color: skyblue;
+    background-color: navy;
+    transition: 1.5s;
 }
 p
 {
