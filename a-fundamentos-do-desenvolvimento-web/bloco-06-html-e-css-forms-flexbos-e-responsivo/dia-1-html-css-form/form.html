@@ -14,6 +14,7 @@
     <main>
         <form action="">
             <fieldset id="dados-pessoais">
+                <legend>Dados Pessoais</legend>
                 <div>
                     <label for="input-nome">Nome</label>
                     <input type="text" id="input-nome" max="40" required autofocus placeholder="Digite seu nome aqui">
@@ -24,7 +25,7 @@
                 </div>
                 <div>
                     <label for="input-cpf">CPF</label>
-                    <input type="number" id="input-cpf" max="11" required placeholder="Digite seu CPF, apenas números">
+                    <input type="number" id="input-cpf" min="11" max="11" required placeholder="Digite seu CPF, apenas números">
                 </div>
                 <div>
                     <label for="input-endereco">Endereço</label>
@@ -41,12 +42,19 @@
                     <option value=""></option>
                 </div>
                 <div>
-                    <label for="radio-tipo">Residência</label>
-                    <input type="radio" name="radio-tipo" id="radio-tipo">
+                    <fieldset id="moradia">
+                        <legend>Moradia</legend>
+                        <input type="radio" name="radio-tipo-residencia" id="residencia-casa">
+                        <label for="residencia-casa">Casa</label>
+                        <input type="radio" name="radio-tipo-residencia" id="residencia-apto">
+                        <label for="residencia-apto">Apartamento</label><br>
+                        <input type="radio" name="radio-situacao-residencia" id="residencia-propria">
+                        <label for="residencia-propria">Própria</label>
+                        <input type="radio" name="radio-situacao-residencia" id="residencia-alugada">
+                        <label for="residencia-alugada">Alugada</label>
                 </div>
             </fieldset>
         </form>
-
     </main>
 
     <script src="script.js"></script>

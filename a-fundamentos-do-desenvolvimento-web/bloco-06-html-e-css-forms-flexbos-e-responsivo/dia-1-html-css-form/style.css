@@ -3,6 +3,27 @@
 {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Fira Sans', sans-serif;
     font-size: 16px;
+}
+header
+{
+    width: 1080px;
+    margin: 0 auto;
+    text-align: center;
+}
+main
+{
+    width: 1080px;
+    margin: 0 auto;
+}
+fieldset
+{
+    padding: 10px;
+    border-radius: 5px;
+}
+legend
+{
+    margin: 5px;
 }
