@@ -7,11 +7,19 @@
     font-family: 'Fira Sans', sans-serif;
     font-size: 16px;
 }
+body
+{
+    width: 1080px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: gainsboro;
+}
 header
 {
     width: 1080px;
     margin: 0 auto;
     text-align: center;
+    padding-bottom: 10px;
 }
 main
 {
@@ -20,11 +28,23 @@ main
 }
 fieldset
 {
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
     margin: 10px 0px;
+    margin-bottom: 30px;
+    border: solid 1px lightgray;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px #c0c0c099;
+}
+fieldset#moradia
+{
+    box-shadow: none;
 }
 legend
 {
     margin: 0px 15px;
+}
+.container
+{
+    margin-bottom: 15px;
 }
