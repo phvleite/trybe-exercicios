@@ -1,0 +1,126 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+body
+{
+    background-color: #dcdcdc;
+    color: #191970;
+    font-family: Montserrat, sans-serif;
+}
+header
+{
+    text-align: center;
+    width: 1080px;
+    margin: 0 auto;
+    padding: 20px;
+}
+header h1
+{
+    font-size: 2.5em;
+    font-weight: 900;
+    letter-spacing: -3px;
+}
+footer
+{
+    padding: 30px;
+    width: 1080px;
+    text-align: center;
+    margin: 0 auto;
+}
+main
+{
+    width: 1080px;
+    margin: 0 auto;
+}
+#texto-leitura
+{
+    width: 700px;
+    float: left;
+    height: 700px;
+}
+.texto
+{
+    text-align: left;
+    padding: 0 20px;
+    height: 100%;
+    border-radius: 25px;
+    box-shadow: #a9a9a9 0px 20px 30px 1px;
+}
+#tituloTexto {
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    letter-spacing: 5px;
+}
+#preferencias
+{
+    width: 350px;
+    float: right;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+#menu-dropdow
+{
+    width: 100%;
+    margin-bottom: 10px;
+}
+#tituloPreferencias
+{
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+}
+.dropdow
+{
+    width: 100%;
+    padding: 5px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.dropdow-text
+{
+    font-size: 0.8em;
+    font-weight: 500;
+}
+.leitura, .corFundoTela, .corTextoLeitura, .tamanhoFonte,
+.espacoLinhasTexto, .fonteTextoLeitura
+{
+    font-size: 0.9em;
+    color: navy;
+    width: 300px;
+    border: none;
+    outline: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    padding: 12px 20px;
+    border-radius: 10px;
+}
+.button
+{
+    margin: 0 auto;
+}
+#btSalvaPreferencias, #btRestauraPadrao
+{
+    margin: 5px auto;
+    padding: 10px;
+    width: 200px;
+    border: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    color: navy;
+    border-radius: 10px;
+    background-color: gainsboro;
+}
+#btSalvaPreferencias:hover, #btRestauraPadrao:hover
+{
+    color: skyblue;
+    background-color: navy;
+    transition: 1.5s;
+}
+p
+{
+    line-height: normal;
+}
