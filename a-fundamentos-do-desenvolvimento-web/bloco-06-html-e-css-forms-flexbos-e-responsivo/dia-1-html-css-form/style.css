@@ -22,8 +22,9 @@ fieldset
 {
     padding: 10px;
     border-radius: 5px;
+    margin: 10px 0px;
 }
 legend
 {
-    margin: 5px;
+    margin: 0px 15px;
 }

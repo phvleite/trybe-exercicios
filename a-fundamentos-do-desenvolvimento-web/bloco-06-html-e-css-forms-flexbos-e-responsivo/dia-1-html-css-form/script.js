@@ -15,7 +15,7 @@ const ufLista = [
     ['PA', 'PARÁ', 'BELÉM'],
     ['PB', 'PARAÍBA', 'JOÃO PESSOA'],
     ['PE', 'PERNAMBUCO','RECIFE'],
-    ['PI', 'PIAUÍ', 'TEREZINA'],
+    ['PI', 'PIAUÍ', 'TERESINA'],
     ['PR', 'PARANÁ', 'CURITIBA'],
     ['RJ', 'RIO DE JANEIRO', 'RIO DE JANEIRO'],
     ['RN', 'RIO GRANDE DO NORTE', 'NATAL'],
@@ -23,7 +23,7 @@ const ufLista = [
     ['RR', 'RORAIMA', 'BOA VISTA'],
     ['RS', 'RIO GRANDE DO SUL', 'PORTO ALEGRE'],
     ['SC', 'SANTA CATARINA', 'FLORIANÓPOLIS'],
-    ['SE', 'SERGIPE', 'ARACAJÚ'],
+    ['SE', 'SERGIPE', 'ARACAJU'],
     ['SP', 'SÃO PAULO', 'SÃO PAULO'],
     ['TO', 'TOCANTINS', 'PALMAS'],
 ];
