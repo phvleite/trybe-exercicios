@@ -5650,6 +5650,7 @@ window.onclick = function(event) {
     }
 }
 
+import JustValidate from 'just-validate';
 const validation = new JustValidate('#curriculo');
 
 validation
@@ -5667,6 +5668,7 @@ validation
       value: 40,
     },
   ])
+
   .addField('#input-email', [
     {
       rule: 'required',
@@ -5677,6 +5679,7 @@ validation
       errorMessage: 'Email inválido!',
     },
   ])
+
   .addField('#input-cpf', [
     {
       rule: 'required',
@@ -5707,14 +5710,17 @@ validation
       value: 80,
     },
   ])
+
   .addRequiredGroup('#radio-tipo-residencia', 'este CAMPO deve ser preenchido')
   .onSuccess((event) => {
     console.log('Validation passes and form submitted', event);
   })
+  
   .addRequiredGroup('#radio-situacao-residencia', 'este CAMPO deve ser preenchido')
   .onSuccess((event) => {
     console.log('Validation passes and form submitted', event);
   })
+  
   .addField('#ultimo-emprego', [
     {
         rule: 'required',
@@ -5729,6 +5735,7 @@ validation
       value: 1000,
     },
   ])
+
   .addField('#cargo', [
     {
         rule: 'required',
@@ -5743,6 +5750,7 @@ validation
       value: 100,
     },
   ])
+
   .addField('#descricaco-cargo', [
     {
         rule: 'required',
@@ -5757,6 +5765,7 @@ validation
       value: 500,
     },
   ])
+
   .addField('#data-inicio', [
     {
         rule: 'required',
