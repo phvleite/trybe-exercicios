@@ -1,5 +1,3 @@
-const { default: JustValidate } = require("just-validate");
-
 const ufLista = [
     ['AC', 'ACRE', 'RIO BRANCO'],
     ['AL', 'ALAGOAS', 'MACEIÓ'],
@@ -5648,10 +5646,14 @@ window.onclick = function(event) {
         ufLista.forEach(capitalEstado => nomeCapital(capitalEstado, event.target.value));
         optionUfCid();
     }
+    if (event.target.id === 'limpar') {
+      capital = ufLista[0][2];
+  }
 }
 
-import JustValidate from 'just-validate';
-const validation = new JustValidate('#curriculo');
+const validation = new JustValidate('#curriculo', {
+  errorFieldCssClass: 'is-invalid',
+});
 
 validation
   .addField('#input-nome', [
@@ -5668,7 +5670,6 @@ validation
       value: 40,
     },
   ])
-
   .addField('#input-email', [
     {
       rule: 'required',
@@ -5679,7 +5680,6 @@ validation
       errorMessage: 'Email inválido!',
     },
   ])
-
   .addField('#input-cpf', [
     {
       rule: 'required',
@@ -5710,17 +5710,28 @@ validation
       value: 80,
     },
   ])
-
+  .addField('#input-bairro', [
+    {
+        rule: 'required',
+        errorMessage: 'o BAIRRO deve ser preenchido',
+    },
+    {
+      rule: 'minLength',
+      value: 1,
+    },
+    {
+      rule: 'maxLength',
+      value: 40,
+    },
+  ])
   .addRequiredGroup('#radio-tipo-residencia', 'este CAMPO deve ser preenchido')
   .onSuccess((event) => {
     console.log('Validation passes and form submitted', event);
   })
-  
   .addRequiredGroup('#radio-situacao-residencia', 'este CAMPO deve ser preenchido')
   .onSuccess((event) => {
     console.log('Validation passes and form submitted', event);
   })
-  
   .addField('#ultimo-emprego', [
     {
         rule: 'required',
@@ -5735,7 +5746,6 @@ validation
       value: 1000,
     },
   ])
-
   .addField('#cargo', [
     {
         rule: 'required',
@@ -5750,8 +5760,7 @@ validation
       value: 100,
     },
   ])
-
-  .addField('#descricaco-cargo', [
+  .addField('#descricao-cargo', [
     {
         rule: 'required',
         errorMessage: 'o CAMPO deve ser preenchido',
@@ -5763,20 +5772,5 @@ validation
     {
       rule: 'maxLength',
       value: 500,
-    },
-  ])
-
-  .addField('#data-inicio', [
-    {
-        rule: 'required',
-        errorMessage: 'o CAMPO deve ser preenchido',
-    },
-    {
-      rule: 'minLength',
-      value: 3,
-    },
-    {
-      rule: 'maxLength',
-      value: 100,
     },
   ]);
