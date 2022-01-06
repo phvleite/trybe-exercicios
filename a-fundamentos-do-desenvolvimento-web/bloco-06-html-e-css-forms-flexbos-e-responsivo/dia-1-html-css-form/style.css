@@ -9,7 +9,6 @@
 }
 body
 {
-    width: 1080px;
     margin: 0 auto;
     padding: 40px;
     background-color: gainsboro;
@@ -23,7 +22,7 @@ header
 }
 main
 {
-    width: 1080px;
+    width: 900px;
     margin: 0 auto;
 }
 fieldset
@@ -44,7 +43,11 @@ legend
 {
     margin: 0px 15px;
 }
-.container
+.container-fluid
 {
     margin-bottom: 15px;
+}
+.btn
+{
+    width: 100px;
 }

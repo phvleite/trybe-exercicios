@@ -1,3 +1,5 @@
+const { default: JustValidate } = require("just-validate");
+
 const ufLista = [
     ['AC', 'ACRE', 'RIO BRANCO'],
     ['AL', 'ALAGOAS', 'MACEIÓ'],
@@ -5647,3 +5649,125 @@ window.onclick = function(event) {
         optionUfCid();
     }
 }
+
+const validation = new JustValidate('#curriculo');
+
+validation
+  .addField('#input-nome', [
+    {
+        rule: 'required',
+        errorMessage: 'o NOME deve ser preenchido',
+    },
+    {
+      rule: 'minLength',
+      value: 3,
+    },
+    {
+      rule: 'maxLength',
+      value: 40,
+    },
+  ])
+  .addField('#input-email', [
+    {
+      rule: 'required',
+      errorMessage: 'o EMAIL dever ser preenchido',
+    },
+    {
+      rule: 'email',
+      errorMessage: 'Email inválido!',
+    },
+  ])
+  .addField('#input-cpf', [
+    {
+      rule: 'required',
+      errorMessage: 'o CPF dever ser preenchido',
+    },
+    {
+      rule: 'maxLength',
+      value: 11,
+      errorMessage: 'o CPF deve conter no máximo 11 números',
+    },
+    {
+      rule: 'minLength',
+      value: 11,
+      errorMessage: 'o CPF deve conter no minímo 11 números',
+    },
+  ])
+  .addField('#input-endereco', [
+    {
+        rule: 'required',
+        errorMessage: 'o ENDEREÇO deve ser preenchido',
+    },
+    {
+      rule: 'minLength',
+      value: 10,
+    },
+    {
+      rule: 'maxLength',
+      value: 80,
+    },
+  ])
+  .addRequiredGroup('#radio-tipo-residencia', 'este CAMPO deve ser preenchido')
+  .onSuccess((event) => {
+    console.log('Validation passes and form submitted', event);
+  })
+  .addRequiredGroup('#radio-situacao-residencia', 'este CAMPO deve ser preenchido')
+  .onSuccess((event) => {
+    console.log('Validation passes and form submitted', event);
+  })
+  .addField('#ultimo-emprego', [
+    {
+        rule: 'required',
+        errorMessage: 'o CAMPO deve ser preenchido',
+    },
+    {
+      rule: 'minLength',
+      value: 1,
+    },
+    {
+      rule: 'maxLength',
+      value: 1000,
+    },
+  ])
+  .addField('#cargo', [
+    {
+        rule: 'required',
+        errorMessage: 'o CAMPO deve ser preenchido',
+    },
+    {
+      rule: 'minLength',
+      value: 3,
+    },
+    {
+      rule: 'maxLength',
+      value: 100,
+    },
+  ])
+  .addField('#descricaco-cargo', [
+    {
+        rule: 'required',
+        errorMessage: 'o CAMPO deve ser preenchido',
+    },
+    {
+      rule: 'minLength',
+      value: 3,
+    },
+    {
+      rule: 'maxLength',
+      value: 500,
+    },
+  ])
+  .addField('#data-inicio', [
+    {
+        rule: 'required',
+        errorMessage: 'o CAMPO deve ser preenchido',
+    },
+    {
+      rule: 'minLength',
+      value: 3,
+    },
+    {
+      rule: 'maxLength',
+      value: 100,
+    },
+  ]);
