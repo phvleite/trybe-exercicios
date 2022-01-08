@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu';
+  }
+  
+  body {
+    background-color: rgb(247, 247, 247);
+  }
+  
+  .header-container {
+    background-color: #5C687C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    flex-basis: 268px;
+    flex-grow: 0;
+    justify-content: center;
+    order: -1;
+  }
+  
+  .menu-container {
+    display: flex;
+    flex-basis: 500px;
+    flex-grow: 1;
+    justify-content: space-around;
+  }
+  
+  .menu-container ul {
+    display: flex;
+    width: 100%;
+  }
+  
+  .menu-container li {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    color: white;
+    font-weight: 500;
+    font-size: 1.3rem;
+    list-style: none;
+    /*margin-right: 10px;*/
+  }
+  
