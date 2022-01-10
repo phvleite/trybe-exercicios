@@ -34,6 +34,8 @@ nav ul {
 
 nav li {
     display: flex;
+    font-size: 0.9rem;
+    text-transform: uppercase;
 }
 
 footer p {
@@ -50,4 +52,29 @@ h1 {
 
 h2 {
     font-size: 1.1rem;
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+    header p {
+        font-size: 1.9rem;
+        font-weight: 600;
+    }
+    p {
+        font-size: 1.25rem;
+    }
+    nav li {
+        font-size: 1.2rem;
+    }
+    footer p {
+        font-size: 0.85rem;
+    }
+    footer h3 {
+        font-size: 0.95rem;
+    }
 }
