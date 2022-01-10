@@ -77,4 +77,50 @@ h2 {
     footer h3 {
         font-size: 0.95rem;
     }
+    li {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    h1 {
+        font-size: 2.0rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    header p {
+        font-size: 2.2rem;
+        font-weight: 800;
+    }
+    p {
+        font-size: 1.35rem;
+    }
+    nav li {
+        font-size: 1.4rem;
+    }
+    footer p {
+        font-size: 1rem;
+    }
+    footer h3 {
+        font-size: 1.2rem;
+    }
+    li {
+        font-size: 1.35rem;
+    }
+    .aside-container {
+        display: flex;
+        justify-content: center;
+    }
+    body {
+        max-width: 1180px;
+    }
+    .aside-one, .aside-two {
+        display: flex;
+        padding: 20px;
+    }
+
+    .aside-two {
+        border-left: solid 1px gray;
+    }
 }
