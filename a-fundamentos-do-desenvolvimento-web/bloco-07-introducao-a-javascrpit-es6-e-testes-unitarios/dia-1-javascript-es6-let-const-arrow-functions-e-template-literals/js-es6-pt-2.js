@@ -15,4 +15,7 @@
 
 // console.log(nFat);
 
-const longestWord = ('Antônio foi no banheiro e não sabemos o que aconteceu');
+// function longestWord(text) {
+//     return text.split(' ').reduce((a, b) => a.length < b.length ? b : a, "");
+// }
+//console.log(longestWord('Antônio foi ao otorrinolaringologista e não sabemos o que aconteceu'));
