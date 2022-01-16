@@ -7,3 +7,4 @@ window.onload = () => {
         document.getElementById('score-click-count').innerHTML = count;
     });
 }
+                                                                
