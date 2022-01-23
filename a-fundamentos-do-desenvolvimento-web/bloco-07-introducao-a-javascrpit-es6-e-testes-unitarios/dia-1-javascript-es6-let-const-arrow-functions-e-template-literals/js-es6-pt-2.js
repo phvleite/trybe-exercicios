@@ -40,5 +40,18 @@
 // console.log(concatanateString());
 
 const cpf = '12345678901';
-const resultado = cpf.replace(/(\d{ 3 })(\d{ 3 })(\d{ 3 })(\d{ 2 })/, '$1.$2.$3-$4');
+const resultado = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
 console.log(resultado);
+//console.log(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/.test(resultado));
+
+const cnpj = '01106587000100';
+// 01.106.587/0001-00
+const resultadoCnpj = cnpj.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, '$1.$2.$3/$4-$5')
+console.log(resultadoCnpj);
+// const resultado2 = cpf.replace(/(\d{ 3 })/, '$1.');
+// console.log(resultado2);
+
+// let str = "Cara, cadê o meu carro?";
+// let patt1 = /[a-z]/gi;
+// let newStr = str.match(patt1);
+// console.log(newStr);
