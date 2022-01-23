@@ -38,11 +38,13 @@ const order = {
     // Adicione abaixo as informações necessárias.
     Object.keys(order.order).forEach(ord => {
       if (ord === 'delivery') {
-        console.log(`Olá ${order.delivery.deliveryPerson} `);
+        const cliente = order.order.delivery.deliveryPerson;
+        const entrega = `entrega para ${order.name}, Telefone: ${order.phoneNumber}, R.${order.address.street}, Nº: ${order.address.number}, AP: ${order.address.apartment} `;
+        console.log(`Olá ${cliente}, ${entrega}`);
       }
     });
   }
-    
+
   customerInfo(order);
   
   const orderModifier = (order) => {
