@@ -11,22 +11,42 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: black;
+  background: #4F4F4F;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-  color: black;
 }
 
 header {
-  background-color: gainsboro;
-  color: black;
-  height: 1000px;
-  border: solid 1px red;
+  color: white;
 }
 
 h1 {
-  color: black;
+  color: #1C1C1C;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 400px;
+  height: 150px;
+  text-align: left;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  background: #4F4F4F;
+  box-shadow: 5px 5px 7px rgba(0,0,0,0.25),
+  inset 2px 2px 5px rgba(255,255,255,0.25),
+  inset -3px -3px 5px rgba(0,0,0,0.5);
+}
+
+.contents-item {
+  padding: 7px;
+  font-size: 1.1rem;
+  font-weight: 700; 
 }

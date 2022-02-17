@@ -23,14 +23,14 @@ const conteudos = [
   },
 ];
 
-class Content extends React.Component () {
+class Content extends React.Component {
   render() {
     return (
       conteudos.map((item) => 
-        <div>
-          <span>{item.conteudo}</span>
-          <span>{item.bloco}</span>
-          <span>{item.status}</span>
+        <div className="contents">
+          <span className="contents-item">Conteúdo:&nbsp;{item.conteudo}</span>
+          <span className="contents-item">Bloco:&nbsp;{item.bloco}</span>
+          <span className="contents-item">status:&nbsp;{item.status}</span>
         </div>
       )
     )
